@@ -1,0 +1,107 @@
+/*
+  AUDIT TRAIL: WMU 
+  1. Reapplied previous WMU changes to 7.3      tel 04/25/2008
+  AUDIT TRAIL: WMU
+  1. Modify font to Verdana...                  nak 8/24/2004
+  2. Increased all font sizes by 5%             nak 5/16/2005
+  AUDIT TRAIL: 7.3                                             LVH 02/03/2006
+  1. Defect LN71-008-1740
+     The SEARCH box and Site Map, Menu, Help, and Exit should not be displayed
+     when a page is printed. 
+  2. Defect 1-FHOGD                                            MEC 04/18/2006
+     Add background-image: none to the BODY element, so that the background
+     image will not be printed and overlay text on multiple print pages.     
+  AUDIT TRAIL: 6.0	
+  1. Hide HR tag for printing					Rk 3/26/2003
+  2. Reduce font sizes for datadisplay tables to fit in page. This will be useful
+     for pages which have lot of content.
+
+  AUDIT TRAIL: 5.3
+  1. Initial release.                        rk 6/14/2002
+
+	This style sheet will be used for print media. 
+	Use this style sheet to define print tags.
+        This style sheet can also be used to override styles from application pages.
+
+  AUDIT TRAIL END
+
+  FILE NAME..: web_defaultprint.css
+  RELEASE....: 5.3
+  PRODUCT....: WTLWEB
+  COPYRIGHT..: Copyright (C) SCT Corporation 2002. All rights reserved.
+*/
+
+
+@media print 
+{
+  /* style sheet for print goes here */
+
+BODY {
+/* wmu_mod: changed font-family flipped order of verdana,arial */
+font-family: Verdana, Arial, helvetica, sans-serif;
+font-style: normal;
+text-align: left;
+/* BROWSER CONSIDERATION - Override browser settings for BODY margin */
+margin-top: 0%;
+margin-left: 0%;
+background-image: none;
+}
+
+DIV.backlinkdiv {
+display:none
+}
+
+DIV.pageheaderdiv2 {
+display: none 
+}
+
+DIV.headerlinksdiv {
+display: none 
+}
+/* Defect LN71-008-1740 */
+DIV.headerlinksdiv2 {
+display: none 
+}
+
+DIV.poweredbydiv {
+display: none 
+}
+
+DIV.footerlinksdiv{
+display: none 
+}
+
+HR {
+color: #FFFFFF;
+text-align: left;
+vertical-align: top;
+margin-top: 0px;
+}
+
+/* Defect LN71-008-1740 */
+SPAN.pageheaderlinks {
+display: none 
+}
+
+Table.datadisplaytable{
+/* wmu_mod: changed font-size from 80 to 95 */
+font-size :95%
+}
+
+
+TABLE TD.dddefault {
+/* wmu_mod: changed font-size from 75 to 90 */
+font-size:90%;
+}
+
+TABLE TH.dddefault {
+/* wmu_mod: changed font-size from 80 to 95 */
+font-size: 95%;
+}
+
+Table TH.ddlabel
+{
+/* wmu_mod: changed font-size from 80 to 95 */
+font-size: 95%;
+}
+}
