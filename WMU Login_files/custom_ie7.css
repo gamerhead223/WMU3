@@ -1,0 +1,41 @@
+#content > .grid-x {
+    margin: 2rem 0;
+}
+.grid-x>.small-6 {
+    width: 25%\0/;
+}
+#alerts {
+   display: none\0/;
+}
+input + .help-text {
+   display: none\0/;
+}
+.cell>.text-center {
+   display: none\0/;
+}
+.lead {
+   display: none\0/;
+}
+div#dcancel {
+    display: none\0/;
+}
+.theDefault {
+	display: block;
+}
+.theDefault {
+	display: none\0/;
+}
+.customIE7{
+	display: none;
+}
+.customIE7{
+	display: block\0/;
+}
+.callout {
+  padding-top: 5px\0/;
+  padding-bottom: 5px\0/;
+}
+#duo_iframe {
+  margin-left: -48px\0/;
+  width: 400px\0/;
+}
